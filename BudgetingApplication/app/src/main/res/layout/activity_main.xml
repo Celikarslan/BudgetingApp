@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Welcome to BudgetBuddy!"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/imageViewBudget"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/budget" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/imageViewBudget"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#8BD8AE"
+        android:text="Start"
+        android:textColorLink="#03A9F4"
+        android:textSize="24sp" />
+
+</RelativeLayout>

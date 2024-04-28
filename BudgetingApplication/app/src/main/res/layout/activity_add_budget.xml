@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ToggleButton
+        android:id="@+id/toggleButtonSalaryHourly"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:backgroundTint="#FF8BD8AE"
+        android:inputType="numberDecimal"
+        android:textOff="Salary"
+        android:textOn="Hourly"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Add EditText fields for hourlyRate and hourlyPay -->
+    <EditText
+        android:id="@+id/editTextHourlyRate"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Hourly Rate"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonSalaryHourly" />
+
+    <EditText
+        android:id="@+id/editTextHours"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Hours"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextHourlyRate" />
+
+    <EditText
+        android:id="@+id/editTextSalary"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#59B7E3"
+        android:hint="Salary"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextHours" />
+
+    <TextView
+        android:id="@+id/textViewTotalSalary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Total Salary: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButtonSalaryHourly" />
+
+    <ListView
+        android:id="@+id/listViewExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonClearExpenses"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalSalary" />
+
+    <Button
+        android:id="@+id/buttonAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF8BD8AE"
+        android:text="Add Expense"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listViewExpenses" />
+
+    <Button
+        android:id="@+id/buttonClearExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF8BD8AE"
+        android:text="Clear Expenses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonAddExpense" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF8BD8AE"
+        android:textOff="Amount"
+        android:textOn="Percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddExpense" />
+
+    <EditText
+        android:id="@+id/editTextSavings"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:hint="Savings"
+        android:text="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonSavings" />
+
+    <TextView
+        android:id="@+id/textViewRemainingAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Remaining Amount: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextSavings" />
+
+    <Button
+        android:id="@+id/buttonSaveBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="#FF8BD8AE"
+        android:onClick="saveBudget"
+        android:text="Save Budget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRemainingAmount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewMonthYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Month/Year"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewWages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Wages: $0.00"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Expenses: $0.00"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewSavings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Savings: $0.00"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/listViewExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF8BD8AE"
+        android:onClick="onBackButtonClick"
+        android:padding="10dp"
+        android:text="Back" />
+
+
+</LinearLayout>
